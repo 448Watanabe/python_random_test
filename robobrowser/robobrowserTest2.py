@@ -6,6 +6,8 @@ https://tmg0525.hatenadiary.jp/entry/2017/11/07/022837
 
 
 from robobrowser import RoboBrowser
+import urllib.request
+from bs4 import BeautifulSoup
 
 def robofunc(site_name):
 	# print(site_name)
@@ -19,14 +21,16 @@ def robofunc(site_name):
 	  features=self.browser.parser,
 	  """
 	browser.open(site_name)
-	print(browser.open(site_name))
-	form = browser.get_form()
-	print(form)
+	
+
+	src = str(browser.parsed())
+	print(src)
+
 
 
 
 if __name__ == "__main__":
 	
 	# print(robo)
-	site_name = "https://github.com"
+	site_name = "https://www.pointmp4.com/en/sound/download/b9VUxLcvfao#video"
 	robofunc(site_name)
